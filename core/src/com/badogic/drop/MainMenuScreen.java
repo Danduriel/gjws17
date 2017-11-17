@@ -4,18 +4,86 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 public class MainMenuScreen implements Screen {
 
 	final Drop game;
 
 	OrthographicCamera camera;
+	
+	private Stage stage;
+    private Texture myTexture;
+    private TextureRegion upRegion;
+    private TextureRegion downRegion;
+    private TextureRegionDrawable myTexRegionDrawable;
+   
+    private Table table;
 
 	public MainMenuScreen(final Drop game) {
 		this.game = game;
+		
+		stage = new Stage(new ScreenViewport()); 
+		
+		table = new Table();
+		table.setFillParent(true);
+		stage.addActor(table);
 
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 1280, 800);
+		Skin skin = new Skin();
+		BitmapFont font = new BitmapFont();
+        TextButtonStyle style= new TextButtonStyle();
+        style.font = font;
+      
+	
+        upRegion = new TextureRegion(myTexture);
+        downRegion = new TextureRegion(myTexture);
+        //style.up = new style.getDrawable(upRegion);
+        //style.down = new style.getDrawable(downRegion);
+        
+        
+        //Erstelle die Buttons
+        TextButton button1 = new TextButton("Start new game", style); 
+        table.add(button1);
+        stage.addActor(button1);
+        
+        TextButton button2 = new TextButton("Load game",style);
+        table.add(button2);
+        stage.addActor(button2);
+        
+        TextButton button3 = new TextButton("Save game", style);
+        table.add(button3);
+        stage.addActor(button3);
+        
+        TextButton button4 = new TextButton("Credits", style);
+        table.add(button4);
+        stage.addActor(button4);
+        
+        TextButton button5 = new TextButton("Quit", style);
+        table.add(button5);
+        stage.addActor(button5);
+        
+        stage.draw();
+
+       
+
+        
+       
+        
+
+
+		
+		
+		
 
 	}
 	@Override
