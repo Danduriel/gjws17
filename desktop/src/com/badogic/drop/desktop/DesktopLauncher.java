@@ -10,7 +10,8 @@ public class DesktopLauncher {
 	      config.title = "Monkeys Building some temple [MBST]";
 	      config.width = 1280;
 	      config.height = 800;
-	      config.foregroundFPS = 60;
+	      config.foregroundFPS = 60; // #PC-Masterrace
+	      config.samples = 8; // Antialiasing
 	      new LwjglApplication(new Drop(), config);
 	   }
 }
