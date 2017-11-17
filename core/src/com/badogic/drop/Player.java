@@ -1,6 +1,6 @@
 package com.badogic.drop;
 
-public class player {
+public class Player {
 	
 	public int geld; 
 	public String name; 
