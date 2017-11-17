@@ -6,17 +6,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
 
-/*Gamestates:
- * 0 Splashscreen / Loader
- * 1 Hauptmenue
- * 2 Credits
- * 3 Hauptspiel
- * 4
- * 5
- * 6
- * 
- */
-
 public class Drop extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
