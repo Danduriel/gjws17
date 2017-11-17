@@ -17,6 +17,7 @@ public class Drop extends ApplicationAdapter {
 		//Testkommentar f�r Git
 		//Test 2 von Linux 
 		//Test Christina2
+		//Test Kevin
 	}
 
 	@Override
