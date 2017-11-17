@@ -16,6 +16,7 @@ public class Drop extends ApplicationAdapter {
 		img = new Texture("badlogic.jpg");
 		//Testkommentar f�r Git
 		//Test 2 von Linux 
+		//Test Christina
 	}
 
 	@Override
