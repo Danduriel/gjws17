@@ -10,6 +10,7 @@ public class DesktopLauncher {
 	      config.title = "Monkeys Building some temple [MBST]";
 	      config.width = 1280;
 	      config.height = 800;
+	      config.foregroundFPS = 60;
 	      new LwjglApplication(new Drop(), config);
 	   }
 }
