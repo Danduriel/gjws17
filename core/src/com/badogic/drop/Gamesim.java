@@ -17,6 +17,7 @@ public class Gamesim {
 	
 	public void update() {
 		System.out.println("Update");
+		System.out.println("Runde: " + turn);
 		turn++;
 	}
 	
