@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Drop extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
+	public Gamesim Game;
 	
 	
 	
