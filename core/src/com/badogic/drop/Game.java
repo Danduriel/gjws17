@@ -7,8 +7,7 @@ public class Game {
 	public int turn;
 	
 	
-	public Game(double zeal, int max, int prog, int turn) 
-	{
+	public Game(double zeal, int max, int prog, int turn) {
 		this.zeal = zeal;
 		this.maxProgress = max;
 		this.progress = prog;
@@ -19,6 +18,7 @@ public class Game {
 		
 		turn++;
 	}
+	
 	public void getEvents() {}
 	
 
