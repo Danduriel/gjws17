@@ -7,10 +7,25 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badogic.drop.Game;
 
+
+/*Gamestates:
+ * 0 Splashscreen / Loader
+ * 1 Hauptmenue
+ * 2 Credits
+ * 3 Hauptspiel
+ * 4
+ * 5
+ * 6
+ * 
+ */
+
+
 public class Drop extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
 	Game game;
+	int gamestate;
+	
 	
 	@Override
 	public void create () {
