@@ -71,36 +71,12 @@ public class GameScreen implements Screen {
 		// tell the SpriteBatch to render in the
 		// coordinate system specified by the camera.
 		game.batch.setProjectionMatrix(camera.combined);
-
-		// begin a new batch and draw the bucket and
-		// all drops
-		game.batch.begin();
-		game.font.draw(game.batch, "Drops Collected: " + dropsGathered, 0, 480);
-		game.batch.draw(bucketImage, bucket.x, bucket.y, bucket.width, bucket.height);
-		for (Rectangle raindrop : raindrops) {
-			game.batch.draw(dropImage, raindrop.x, raindrop.y);
-		}
-		game.batch.end();
-
-		/*
+		
 		// process user input
 		if (Gdx.input.isTouched()) {
-			Vector3 touchPos = new Vector3();
-			touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-			camera.unproject(touchPos);
-			bucket.x = touchPos.x - 64 / 2;
+			//gamesim.update();
 		}
-		if (Gdx.input.isKeyPressed(Keys.LEFT))
-			bucket.x -= 200 * Gdx.graphics.getDeltaTime();
-		if (Gdx.input.isKeyPressed(Keys.RIGHT))
-			bucket.x += 200 * Gdx.graphics.getDeltaTime();
 
-		// make sure the bucket stays within the screen bounds
-		if (bucket.x < 0)
-			bucket.x = 0;
-		if (bucket.x > 800 - 64)
-			bucket.x = 800 - 64;
-*/
 
 		
 		

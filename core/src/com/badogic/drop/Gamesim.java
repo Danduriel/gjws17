@@ -20,5 +20,10 @@ public class Gamesim {
 		turn++;
 	}
 	
-	public void getEvents() {}
-}
+	public void getRandomEvent() {}
+
+	public void updateAction() {}
+	
+	//public void performAction(Action action){}
+	
+	}
