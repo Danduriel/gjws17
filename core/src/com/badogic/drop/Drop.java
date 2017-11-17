@@ -5,15 +5,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badogic.drop.Game;
 
 public class Drop extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
+	Game game;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+		game = new Game(400.0,5000,0,0);
 		//Testkommentar f�r Git
 		//Test 2 von Linux 
 		//Test Christina2
