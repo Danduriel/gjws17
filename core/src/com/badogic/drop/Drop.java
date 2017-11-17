@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Drop extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
-	public Gamesim Game;
+	public Gamesim gamesim;
 	
 	
 	
@@ -22,7 +22,10 @@ public class Drop extends Game {
 	}
 	
 	@Override
+	//Update
 	public void render() {
+		
+		gamesim.update();
 		super.render(); //important!
 	}
 	
