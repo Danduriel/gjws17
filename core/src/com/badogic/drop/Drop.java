@@ -14,7 +14,8 @@ public class Drop extends ApplicationAdapter {
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
-		//Testkommentar für Git
+		//Testkommentar fï¿½r Git
+		//Test 2 von Linux 
 	}
 
 	@Override
