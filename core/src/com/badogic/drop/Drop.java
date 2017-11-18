@@ -11,8 +11,10 @@ public class Drop extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
 	public Gamesim gamesim = new Gamesim(0);
+	/*
 	public MainMenuScreen mainMenuScreen;
-	
+	public GameMenuScreen gameMenuScreen;
+	*/
 	
 	
 	@Override
@@ -21,22 +23,25 @@ public class Drop extends Game {
 		//Use LibGDX's default Arial font.
 		font = new BitmapFont();
 		
-		//Neuer Code
-		mainMenuScreen = new MainMenuScreen(this);
-		this.setScreen(mainMenuScreen);
-
-		/* Funktionierender Code
-		this.setScreen(new MainMenuScreen(this)); */
+		//Nochmal neuer Code
+		ScreenManager.initialize(this);
+		ScreenManager.setMainMenuScreen();
 	}
 	
 	@Override
 	//Update
 	public void render() {
 		/* if Button pressed do update*/
+		/*
 		if (mainMenuScreen.click == true) {
-			gamesim.update();
+			this.create();
 			mainMenuScreen.click = false;
 		}
+	
+		if (gameMenuScreen.click == true) {
+			gamesim.update();
+			gameMenuScreen.click = false;
+		}*/
 		
 		super.render(); //important!
 	}

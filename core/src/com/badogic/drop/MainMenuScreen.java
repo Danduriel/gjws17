@@ -47,7 +47,8 @@ public class MainMenuScreen implements Screen {
 	    	@Override
 	    	public void clicked (InputEvent event, float x, float y) {
 	    		System.out.println("CLICK NEW GAME!");
-	    		click = true;
+	    		//ScreenManager.setGameScreen();
+	    		//click = true;
 	    	}
 	    });
 	    
