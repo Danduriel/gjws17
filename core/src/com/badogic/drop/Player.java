@@ -8,7 +8,8 @@ public class Player {
 	public String name; 
 	public String gender; 
 	public String race;
-	public double might; 
+	public int might; 
+	public int ap;
 	
 	public Player(String name, String gender, String race) {
 		this.dynamite = 0;
@@ -17,13 +18,16 @@ public class Player {
 		this.name = name;
 		this.gender = gender;
 		this.race = race;
-		this.might = 1.0;			
+		this.might = 1;
+		this.ap = 10;
 	}
 			
-	public void update(int dynamite, int beer, int money) {
+	public void update(int dynamite, int beer, int money, int might,int ap) {
 		this.dynamite += dynamite;
 		this.beer += beer;
 		this.money += money;
+		this.might += might;
+		this.ap += ap;
 	}
 
 

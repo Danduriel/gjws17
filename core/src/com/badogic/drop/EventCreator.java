@@ -12,16 +12,16 @@ public class EventCreator {
 		//Add neutral Events
 		neutralEvents.add(new myEvent("test neutral", // Event Name
 									"test description neutral", // Event description
-									0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
+									0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 		//Add good Events
 		goodEvents.add(new myEvent("test good", // Event Name
 									"test description good", // Event description
-									0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
+									0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 		
 		//Add bad Events
 		badEvents.add(new myEvent("test bad", // Event Name
 								"test description bad", // Event description
-								0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
+								0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 	}
 	
 	// arrayID 0 = neutral, 1 = good, 2 = bad
