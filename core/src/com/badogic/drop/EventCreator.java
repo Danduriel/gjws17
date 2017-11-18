@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class EventCreator {
-	ArrayList <myEvent> neutralEvents = new ArrayList<myEvent>();	
-	ArrayList <myEvent> goodEvents = new ArrayList<myEvent>(); 
-	ArrayList <myEvent> badEvents = new ArrayList<myEvent>();
+	static ArrayList <myEvent> neutralEvents = new ArrayList<myEvent>();	
+	static ArrayList <myEvent> goodEvents = new ArrayList<myEvent>(); 
+	static ArrayList <myEvent> badEvents = new ArrayList<myEvent>();
 	
 	public EventCreator() {
 		//Add neutral Events
@@ -25,7 +25,7 @@ public class EventCreator {
 	}
 	
 	// arrayID 0 = neutral, 1 = good, 2 = bad
-	public myEvent getEventValue(int arrayID) {
+	public static myEvent getEventValue(int arrayID) {
 		switch(arrayID) {
 		case 0: {
 				return neutralEvents.get(ThreadLocalRandom.current().nextInt(0, neutralEvents.size() + 1));
