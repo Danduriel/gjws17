@@ -1,6 +1,7 @@
 package com.badogic.drop;
 
 import com.badlogic.gdx.Gdx;
+
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -10,9 +11,11 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class MainMenuScreen implements Screen {
 
@@ -20,6 +23,7 @@ public class MainMenuScreen implements Screen {
     private SpriteBatch batch;
     private Skin skin;
     Stage stage;
+    public boolean click = false;
     
 	public MainMenuScreen(final Drop game) {
 		this.game = game;  
@@ -32,27 +36,53 @@ public class MainMenuScreen implements Screen {
 	    TextButton newGameButton = new TextButton("Neues Spiel", skin); // Use the initialized skin
 	    newGameButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(newGameButton);
+	    /*
 	    newGameButton.addListener(new ChangeListener() {
 	    	public void changed (ChangeEvent event, Actor newGameButton) {
 	    		System.out.println("newgame!");
 	    	}
+	    });*/
+	    newGameButton.addListener(new ClickListener() {
+	    	@Override
+	    	public void clicked (InputEvent event, float x, float y) {
+	    		System.out.println("CLICK NEW GAME!");
+	    		click = true;
+	    	}
 	    });
+	    
 	    
 	    TextButton creditsButton = new TextButton("Credits", skin); // Use the initialized skin
 	    creditsButton.setPosition(Gdx.graphics.getWidth()/3 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(creditsButton);
+	    /*
 	    creditsButton.addListener(new ChangeListener() {
 	    	public void changed (ChangeEvent event, Actor creditsButton) {
 	    		System.out.println("credits!");
 	    	}
+	    });*/
+	    creditsButton.addListener(new ClickListener() {
+	    	@Override
+	    	public void clicked (InputEvent event, float x, float y) {
+	    		System.out.println("CLICK CREDITS!");
+	    		click = true;
+	    	}
 	    });
+	    
 	    
 	    TextButton exitButton = new TextButton("Beenden", skin); // Use the initialized skin
 	    exitButton.setPosition(Gdx.graphics.getWidth()/4 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(exitButton);
-	    newGameButton.addListener(new ChangeListener() {
+	    /*
+	    exitButton.addListener(new ChangeListener() {
 	    	public void changed (ChangeEvent event, Actor newGameButton) {
 	    		System.out.println("exit!");
+	    	}
+	    });*/
+	    exitButton.addListener(new ClickListener() {
+	    	@Override
+	    	public void clicked (InputEvent event, float x, float y) {
+	    		System.out.println("CLICK EXIT GAME!");
+	    		click = true;
 	    	}
 	    });
              
