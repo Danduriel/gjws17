@@ -19,7 +19,7 @@ public class Gamesim {
 	public void update() {
 		//Fuehrt neues Random Event aus
 		
-		getNextAction();
+		getNextAction("derp"); //FIX
 		getRandomEvent();
 		
 		//Addiert Event Werte
