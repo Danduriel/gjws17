@@ -13,6 +13,13 @@ public class EventCreator {
 		neutralEvents.add(new MyEvent("test neutral", // Event Name
 									"test description neutral", // Event description
 									0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
+		neutralEvents.add(new MyEvent("test neutral", // Event Name
+				"test description neutral", // Event description
+				0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
+
+		
+		
+		
 		//Add good Events
 		goodEvents.add(new MyEvent("test good", // Event Name
 									"test description good", // Event description
