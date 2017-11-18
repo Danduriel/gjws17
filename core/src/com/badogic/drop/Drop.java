@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
 public class Drop extends Game {
-	public Drop drop;
+	
 	public SpriteBatch batch;
 	public BitmapFont font;
 	public Gamesim gamesim = new Gamesim(0);
@@ -24,9 +24,10 @@ public class Drop extends Game {
 		//Use LibGDX's default Arial font.
 		font = new BitmapFont();
 		
-		//Nochmal neuer Code
-		ScreenManager.initialize(this);
-		ScreenManager.setMainMenuScreen();
+
+		//this.setScreen(new MainMenuScreen(this));
+		this.setScreen(new GameMenuScreen(this));
+		//this.setScreen(new TestScreen(this));
 	}
 	
 	@Override

@@ -14,7 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-public class Testscreen implements Screen {
+public class TestScreen implements Screen {
 
 	final Drop game;
     private SpriteBatch batch;
@@ -22,7 +22,7 @@ public class Testscreen implements Screen {
     private Stage stage;
     private Table table;
     
-    public Testscreen(final Drop game) {
+    public TestScreen(final Drop game) {
 		this.game = game;  
 		create();
     }
