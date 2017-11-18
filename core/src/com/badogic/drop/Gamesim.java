@@ -12,6 +12,7 @@ public class Gamesim {
 		this.zeal = zeal;
 		this.maxProgress = max;
 		this.progress = prog;
+		
 		this.turn = turn;
 	}
 	
