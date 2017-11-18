@@ -11,6 +11,7 @@ public class Drop extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
 	public Gamesim gamesim = new Gamesim(0);
+	
 	/*
 	public MainMenuScreen mainMenuScreen;
 	public GameMenuScreen gameMenuScreen;
