@@ -2,6 +2,7 @@ package com.badogic.drop;
 
 import com.badlogic.gdx.Gdx;
 
+
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -9,14 +10,18 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+
+
 
 
 public class GameMenuScreen implements Screen {
@@ -27,13 +32,23 @@ public class GameMenuScreen implements Screen {
     private Table table; 
     public boolean click = false;
     
+	private TextureAtlas textureAtlas;
+    
 	public GameMenuScreen(final Drop game) {
 		this.game = game;  
 		
 		stage = new Stage();
-	    Gdx.input.setInputProcessor(stage);// Make the stage consume events
+		textureAtlas = new TextureAtlas("comic-ui.atlas");
+		skin = new Skin();
+		skin.addRegions(textureAtlas);
 
-	    createBasicSkin();
+
+		TextButtonStyle buttonStyle = skin.get("bigButton", TextButtonStyle.class);
+		
+		TextButton button = new TextButton("Click me!", buttonStyle);
+
+	    
+	    //createBasicSkin();
 	    
 	    TextButton turnOverButton = new TextButton("Turn Over", skin); // Use the initialized skin
 	    turnOverButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
@@ -45,47 +60,10 @@ public class GameMenuScreen implements Screen {
 	    		click = true;
 	    	}
 	    });  
-	    
-	    
-    	table = new Table();
-    	table.setFillParent(true);
-    	stage.addActor(table);
-
-    	table.setDebug(true); // This is optional, but enables debug lines for tables.
-
-        Label nameLabel = new Label("Name:", skin);
-        TextField nameText = new TextField("", skin);
-        Label addressLabel = new Label("Address:", skin);
-        TextField addressText = new TextField("", skin);
-        
-        table.add(nameLabel);
-        table.add(nameText).width(100);
-        table.row();
-        table.add(addressLabel);
-        table.add(addressText).width(100);
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+	
 	    
 	}
-	
+	/*
 	public void createBasicSkin() {
 		//Create a font
 		BitmapFont font = new BitmapFont();
@@ -106,7 +84,7 @@ public class GameMenuScreen implements Screen {
 		textButtonStyle.over = skin.newDrawable("background", Color.LIGHT_GRAY);
 		textButtonStyle.font = skin.getFont("default");
 		skin.add("default", textButtonStyle);
-	}
+	}*/
 	
 	public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1);
@@ -129,6 +107,19 @@ public class GameMenuScreen implements Screen {
 
 	@Override
 	public void show() {
+		
+		table = new Table();
+		table.setFillParent(true);
+        	table.setDebug(true);
+        	stage.addActor(table);
+        
+        	// temporary until we have asset manager in
+        	 skin = new Skin(Gdx.files.internal("comic-ui.json"));
+        
+        	//create buttons
+        	TextButton newGame = new TextButton("New Game", skin);
+        	TextButton preferences = new TextButton("Preferences", skin);
+        	TextButton exit = new TextButton("Exit", skin);
 	}
 
 	@Override
