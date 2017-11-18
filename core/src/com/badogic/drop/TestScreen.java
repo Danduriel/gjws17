@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -17,22 +18,34 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 public class TestScreen implements Screen {
 
 	final Drop game;
-    private SpriteBatch batch;
+	private SpriteBatch batch;
     private Skin skin;
     private Stage stage;
     private Table table;
+    private TextureAtlas atlas;
     
     public TestScreen(final Drop game) {
 		this.game = game;  
 		create();
     }
  
-
-
     public void create () {
     	stage = new Stage();
-
-
+    	//skin = new Skin("comic-ui.json","comic-ui.atlas");
+    	
+    	atlas = new TextureAtlas(Gdx.files.internal("comic-ui.atlas"));
+    	skin = new Skin(atlas);
+    	
+    	
+    	/*
+    	 *  skin.addRegions(AssetsManager.getTextureAtlas());
+    	 *  
+    	 *  
+    	 * 
+    	 * */
+    	
+    	
+    			
     	table = new Table();
     	table.setFillParent(true);
     	stage.addActor(table);
@@ -62,6 +75,7 @@ public class TestScreen implements Screen {
     }
 
     public void dispose() {
+    	batch.dispose();
     	stage.dispose();
     }
 

@@ -26,8 +26,8 @@ public class Drop extends Game {
 		
 
 		//this.setScreen(new MainMenuScreen(this));
-		this.setScreen(new GameMenuScreen(this));
-		//this.setScreen(new TestScreen(this));
+		//this.setScreen(new GameMenuScreen(this));
+		this.setScreen(new TestScreen(this));
 	}
 	
 	@Override
