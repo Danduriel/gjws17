@@ -38,7 +38,7 @@ public class MainMenuScreen implements Screen {
 	    	@Override
 	    	public void clicked (InputEvent event, float x, float y) {
 	    		System.out.println("CLICK NEW GAME!");
-	    		game.gamesim.getNextAction("beer");
+	    		game.gamesim.setNextAction("beer");
 	    		//ScreenManager.setGameScreen();
 	    		//click = true;
 	    	}

@@ -19,14 +19,14 @@ public class Gamesim {
 	public void update() {
 		//Fuehrt neues Random Event aus
 		
-		getNextAction("derp"); //FIX
+		//getNextAction("derp"); //FIX
 		getRandomEvent();
 		
 		//Addiert Event Werte
 		description = tempEvent.description;
 		
 		
-		//AP Player / Temple update
+		//AP Player / Temple update 
 		player.update(tempAP.dynamite, tempAP.beer, tempAP.money, tempAP.might, tempAP.ap);
 		temple.update(tempAP.zeal, tempAP.progress);
 		
@@ -45,7 +45,7 @@ public class Gamesim {
 		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
 	}	
 	
-	public void getNextAction(String action) {
+	public void setNextAction(String action) {
 		//ToDo Switch action
 		tempAP = APCreator.clickBeerButton();
 	}
