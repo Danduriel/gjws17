@@ -12,8 +12,9 @@ public class Drop extends Game {
 	public BitmapFont font;
 	public Gamesim gamesim = new Gamesim(0);
 	
-	/*
+	
 	public MainMenuScreen mainMenuScreen;
+	/*
 	public GameMenuScreen gameMenuScreen;
 	*/
 	
@@ -25,21 +26,24 @@ public class Drop extends Game {
 		font = new BitmapFont();
 		
 
-		//this.setScreen(new MainMenuScreen(this));
+		
+		mainMenuScreen = new MainMenuScreen(this);
+		this.setScreen(mainMenuScreen);
 		//this.setScreen(new GameMenuScreen(this));
-		this.setScreen(new TestScreen(this));
+		//this.setScreen(new TestScreen(this));
+
 	}
 	
 	@Override
 	//Update
 	public void render() {
 		/* if Button pressed do update*/
-		/*
+		
 		if (mainMenuScreen.click == true) {
-			this.create();
+			gamesim.update();
 			mainMenuScreen.click = false;
 		}
-	
+		/*
 		if (gameMenuScreen.click == true) {
 			gamesim.update();
 			gameMenuScreen.click = false;

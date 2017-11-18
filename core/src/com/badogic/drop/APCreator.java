@@ -6,9 +6,14 @@ public class APCreator {
 	}
 	
 	//Dummy ButtonFunktion
+	// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
 	public static MyAP clickBeerButton(){
-		MyAP tempAP = new MyAP("Party schmei�en","Versuche die eifrigen Affen zu verkatern",0,5,20,0,10,-50,-50);
-		
+		MyAP tempAP = new MyAP("Party schmei�en","Versuche die eifrigen Affen zu verkatern",0,-5,-20,0,-10,-50,-50);
+		return tempAP;
+	}
+	
+	public static MyAP clickDynamiteButton() {
+		MyAP tempAP = new MyAP("Sabotiere Baustelle","Sabotiere die Baustelle mit etwas Explosiven",-5,0,-50,0,-5,-50,-50);
 		return tempAP;
 	}
 }
