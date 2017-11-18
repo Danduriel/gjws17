@@ -2,12 +2,12 @@ package com.badogic.drop;
 
 public class APCreator {
 	public APCreator() {
-		MyAP myAP = new MyAP("","",0,0,0,0,0,0,0);
+		//MyAP myAP = new MyAP("","",0,0,0,0,0,0,0);
 	}
 	
 	//Dummy ButtonFunktion
 	public static MyAP clickBeerButton(){
-		MyAP tempAP = new MyAP("Party schmeißen","Versuche die eifrigen Affen zu verkatern",0,5,20,0,10,-50,-50);
+		MyAP tempAP = new MyAP("Party schmeiï¿½en","Versuche die eifrigen Affen zu verkatern",0,5,20,0,10,-50,-50);
 		
 		return tempAP;
 	}

@@ -41,7 +41,8 @@ public class MainMenuScreen implements Screen {
 	    	public void changed (ChangeEvent event, Actor newGameButton) {
 	    		System.out.println("newgame!");
 	    	}
-	    });*/
+	    });
+	    */
 	    newGameButton.addListener(new ClickListener() {
 	    	@Override
 	    	public void clicked (InputEvent event, float x, float y) {
