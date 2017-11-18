@@ -1,6 +1,6 @@
 package com.badogic.drop;
 
 public class Events {
-	public static Attributes getEventValue(String name) {
-	}
+	//public static Attributes getEventValue(String name) {
+	//}
 }
