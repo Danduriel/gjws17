@@ -41,15 +41,15 @@ public class Drop extends Game {
 	public void render() {
 		/* if Button pressed do update*/
 		
-		if (mainMenuScreen.click == true) {
-			gamesim.update();
-			mainMenuScreen.click = false;
-		}
-		/*
+		//if (mainMenuScreen.click == true) {
+		//	gamesim.update();
+		//	mainMenuScreen.click = false;
+		//}
+		
 		if (gameMenuScreen.click == true) {
 			gamesim.update();
 			gameMenuScreen.click = false;
-		}*/
+		}
 		
 		super.render(); //important!
 	}

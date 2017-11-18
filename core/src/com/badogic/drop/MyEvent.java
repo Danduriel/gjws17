@@ -6,25 +6,25 @@ public class MyEvent {
 	public int dynamite,beer,zeal,money,progress,might,ap = 0;
 	
 	//Konstruktor Events
-	public MyEvent(String startName, String startDescripton, 
-					int startDynamite, int startBeer, int startMoney, int startMight, int startAP, 
-					int startZeal, int startProgress)
+	public MyEvent(String name, String description, 
+					int dynamite, int beer, int money, int might, int ap, 
+					int zeal, int progress)
 	{
 
 		
 		//Event
-		this.name = startName;
-		this.description = startDescripton;
+		this.name = name;
+		this.description = description;
 		
 		//Player
-		this.dynamite = startDynamite;
-		this.beer = startBeer;
-		this.money = startMoney;
-		this.might = startMight;
-		this.ap = startAP;
+		this.dynamite = dynamite;
+		this.beer = beer;
+		this.money = money;
+		this.might = might;
+		this.ap = ap;
 		
 		//Temple
-		this.zeal = startZeal;
+		this.zeal = zeal;
 		this.progress = startProgress;
 	}
 	
