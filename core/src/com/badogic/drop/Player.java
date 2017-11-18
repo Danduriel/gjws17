@@ -13,8 +13,10 @@ public class Player {
 		this.name = name;
 		this.gender = gender;
 		this.race = race;
-		this.might = 1.0;
-					
+		this.might = 1.0;			
 	}
+			
+
+
 
 }

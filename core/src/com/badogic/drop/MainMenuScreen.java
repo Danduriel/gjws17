@@ -73,17 +73,7 @@ public class MainMenuScreen implements Screen {
         stage.addActor(button5);
         
         stage.draw();
-
-       
-
-        
-       
-        
-
-
-		
-		
-		
+	
 
 	}
 	@Override
