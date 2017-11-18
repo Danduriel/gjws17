@@ -38,6 +38,8 @@ public class Gamesim {
 		System.out.println("Update");
 		System.out.println("Runde: " + turn);
 		System.out.println(description);
+		System.out.print("Dynamite: "+player.dynamite+ "\nBeer: "+player.beer+ "\nMoney: "+player.money+ "\nMight+ "+ player.might+"\nAP: "+player.ap+"\n");
+		System.out.print("Zeal: "+temple.zeal+"\nProgress: "+temple.progress);
 		turn++;
 	}
 	
@@ -47,6 +49,11 @@ public class Gamesim {
 	
 	public void setNextAction(String action) {
 		//ToDo Switch action
-		tempAP = APCreator.clickBeerButton();
+		if (action == "beer") {
+			tempAP=APCreator.clickBeerButton();
+		}
+		else if (action == "dynamite") {
+			tempAP=APCreator.clickDynamiteButton();
+		}
 	}
 }
