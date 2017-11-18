@@ -39,7 +39,7 @@ public class MainMenuScreen implements Screen {
 	    });
 	    
 	    TextButton creditsButton = new TextButton("Credits", skin); // Use the initialized skin
-	    creditsButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
+	    creditsButton.setPosition(Gdx.graphics.getWidth()/3 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(creditsButton);
 	    creditsButton.addListener(new ChangeListener() {
 	    	public void changed (ChangeEvent event, Actor creditsButton) {
@@ -48,7 +48,7 @@ public class MainMenuScreen implements Screen {
 	    });
 	    
 	    TextButton exitButton = new TextButton("Beenden", skin); // Use the initialized skin
-	    exitButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
+	    exitButton.setPosition(Gdx.graphics.getWidth()/4 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(exitButton);
 	    newGameButton.addListener(new ChangeListener() {
 	    	public void changed (ChangeEvent event, Actor newGameButton) {
