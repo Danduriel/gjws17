@@ -25,6 +25,8 @@ public class EventCreator {
 									"test description good", // Event description
 									0,0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
 		
+		
+		
 		//Add bad Events
 		badEvents.add(new MyEvent("test bad", // Event Name
 								"test description bad", // Event description
