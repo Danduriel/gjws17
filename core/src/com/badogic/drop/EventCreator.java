@@ -11,17 +11,17 @@ public class EventCreator {
 	public EventCreator() {
 		//Add neutral Events
 		neutralEvents.add(new myEvent("test neutral", // Event Name
-									"test dialog neutral", // Event Dialog
-									0,0,0,0,0)); // Dynamite, Beer, Zeal, Money, Progress
+									"test description neutral", // Event description
+									0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 		//Add good Events
 		goodEvents.add(new myEvent("test good", // Event Name
-									"test dialog good", // Event Dialog
-									0,0,0,0,0)); // Dynamite, Beer, Zeal, Money, Progress
+									"test description good", // Event description
+									0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 		
 		//Add bad Events
 		badEvents.add(new myEvent("test bad", // Event Name
-								"test dialog bad", // Event Dialog
-								0,0,0,0,0)); // Dynamite, Beer, Zeal, Money, Progress
+								"test description bad", // Event description
+								0,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress
 	}
 	
 	// arrayID 0 = neutral, 1 = good, 2 = bad

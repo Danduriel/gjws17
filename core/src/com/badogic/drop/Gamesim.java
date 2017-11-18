@@ -7,7 +7,7 @@ public class Gamesim {
 	public Temple temple = new Temple(400,5000,0);
 	public int turn;
 	public EventCreator eventCreator = new EventCreator();
-	public myEvent tempEvent = new myEvent("","",0,0,0,0,0);
+	public myEvent tempEvent = new myEvent("","",0,0,0,0,0,0);
 	public String dialog = "";
 	
 	
@@ -20,7 +20,7 @@ public class Gamesim {
 		getRandomEvent();
 		
 		//Addiert Event Werte
-		dialog = tempEvent.dialog;
+		dialog = tempEvent.description;
 		
 		player.update(tempEvent.dynamite, tempEvent.beer, tempEvent.money);
 		temple.update(tempEvent.zeal, tempEvent.progress);
