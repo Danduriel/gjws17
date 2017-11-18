@@ -13,10 +13,9 @@ public class Drop extends Game {
 	public Gamesim gamesim = new Gamesim(0);
 	
 	
-	public MainMenuScreen mainMenuScreen;
-	/*
+	public MainMenuScreen mainMenuScreen;	
 	public GameMenuScreen gameMenuScreen;
-	*/
+	
 	
 	
 	@Override
@@ -27,9 +26,12 @@ public class Drop extends Game {
 		
 
 		
-		mainMenuScreen = new MainMenuScreen(this);
-		this.setScreen(mainMenuScreen);
-		//this.setScreen(new GameMenuScreen(this));
+		//mainMenuScreen = new MainMenuScreen(this);
+		//this.setScreen(mainMenuScreen);
+		
+		gameMenuScreen = new GameMenuScreen(this);
+		this.setScreen(new GameMenuScreen(this));
+		
 		//this.setScreen(new TestScreen(this));
 
 	}

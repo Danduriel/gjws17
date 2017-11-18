@@ -11,8 +11,11 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 
@@ -20,7 +23,8 @@ public class GameMenuScreen implements Screen {
 	final Drop game;
     private SpriteBatch batch;
     private Skin skin;
-    Stage stage;
+    private Stage stage;
+    private Table table; 
     public boolean click = false;
     
 	public GameMenuScreen(final Drop game) {
@@ -41,6 +45,45 @@ public class GameMenuScreen implements Screen {
 	    		click = true;
 	    	}
 	    });  
+	    
+	    
+    	table = new Table();
+    	table.setFillParent(true);
+    	stage.addActor(table);
+
+    	table.setDebug(true); // This is optional, but enables debug lines for tables.
+
+        Label nameLabel = new Label("Name:", skin);
+        TextField nameText = new TextField("", skin);
+        Label addressLabel = new Label("Address:", skin);
+        TextField addressText = new TextField("", skin);
+        
+        table.add(nameLabel);
+        table.add(nameText).width(100);
+        table.row();
+        table.add(addressLabel);
+        table.add(addressText).width(100);
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	}
 	
 	public void createBasicSkin() {
@@ -77,6 +120,8 @@ public class GameMenuScreen implements Screen {
     @Override
     public void dispose() {
         batch.dispose();
+        skin.dispose();
+        stage.dispose();
     }
 	@Override
 	public void resize(int width, int height) {
