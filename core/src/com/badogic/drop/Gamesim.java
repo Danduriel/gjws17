@@ -16,8 +16,8 @@ public class Gamesim {
 	}
 	
 	public void update() {
-		//F�hrt neues Random Event aus
-		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
+		//Fuehrt neues Random Event aus
+		getRandomEvent();
 		
 		//Addiert Event Werte
 		dialog = tempEvent.dialog;
@@ -35,7 +35,9 @@ public class Gamesim {
 		turn++;
 	}
 	
-	public void getRandomEvent() {}
+	public void getRandomEvent() {
+		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
+	}
 
 	public void updateAction() {}
 	
