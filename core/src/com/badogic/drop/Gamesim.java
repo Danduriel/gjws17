@@ -10,8 +10,8 @@ public class Gamesim {
 	public myEvent tempEvent = new myEvent("","",0,0,0,0,0);
 	public String dialog = "";
 	
-	public Gamesim(int turn) {
-		
+	
+	public Gamesim(double zeal, int max, int prog, int turn) {	
 		this.turn = turn;
 	}
 	
