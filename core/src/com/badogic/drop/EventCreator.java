@@ -28,13 +28,13 @@ public class EventCreator {
 	public static myEvent getEventValue(int arrayID) {
 		switch(arrayID) {
 		case 0: {
-				return neutralEvents.get(ThreadLocalRandom.current().nextInt(0, neutralEvents.size() + 1));
+				return neutralEvents.get(ThreadLocalRandom.current().nextInt(0, neutralEvents.size()));
 			}
 		case 1: {
-				return goodEvents.get(ThreadLocalRandom.current().nextInt(0, goodEvents.size() + 1));
+				return goodEvents.get(ThreadLocalRandom.current().nextInt(0, goodEvents.size()));
 			}
 		case 2: {
-				return badEvents.get(ThreadLocalRandom.current().nextInt(0, badEvents.size() + 1));
+				return badEvents.get(ThreadLocalRandom.current().nextInt(0, badEvents.size()));
 			}
 		default: {
 				return neutralEvents.get(0);
