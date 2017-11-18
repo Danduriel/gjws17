@@ -11,12 +11,12 @@ public class Gamesim {
 	public String dialog = "";
 	
 	
-	public Gamesim(double zeal, int max, int prog, int turn) {	
+	public Gamesim(int turn) {	
 		this.turn = turn;
 	}
 	
 	public void update() {
-		//Führt neues Random Event aus
+		//Fï¿½hrt neues Random Event aus
 		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,2+1));
 		dialog = tempEvent.dialog;
 		
