@@ -1,13 +1,17 @@
 package com.badogic.drop;
 
+import java.util.HashMap;
+
 import com.badlogic.gdx.Gdx;
 
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button.ButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
@@ -22,7 +26,10 @@ public class TestScreen implements Screen {
     private Skin skin;
     private Stage stage;
     private Table table;
-    private TextureAtlas atlas;
+    private TextureAtlas textureAtlas;
+    
+	private HashMap<String, TextureRegion> texturesMap = new HashMap<String, TextureRegion>();
+	
     
     public TestScreen(final Drop game) {
 		this.game = game;  
@@ -33,19 +40,12 @@ public class TestScreen implements Screen {
     	stage = new Stage();
     	//skin = new Skin("comic-ui.json","comic-ui.atlas");
     	
-    	atlas = new TextureAtlas(Gdx.files.internal("comic-ui.atlas"));
-    	skin = new Skin(atlas);
+    	textureAtlas = new TextureAtlas("comic-ui.atlas");
+    	skin = new Skin();
+    	skin.addRegions(textureAtlas);
+    	//loadTextureRegion();
     	
     	
-    	/*
-    	 *  skin.addRegions(AssetsManager.getTextureAtlas());
-    	 *  
-    	 *  
-    	 * 
-    	 * */
-    	
-    	
-    			
     	table = new Table();
     	table.setFillParent(true);
     	stage.addActor(table);
@@ -63,6 +63,12 @@ public class TestScreen implements Screen {
         table.add(addressLabel);
         table.add(addressText).width(100);
     }
+    /*
+    public void loadTextureRegion() {
+        ButtonStyle style = new ButtonStyle();
+        style.up = skin.getDrawable(getRegionName());
+        setStyle(style);
+    }*/
 
     public void resize (int width, int height) {
     	stage.getViewport().update(width, height, true);
