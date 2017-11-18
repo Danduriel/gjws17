@@ -60,7 +60,7 @@ public class EventCreator {
 		//Add good Events
 		goodEvents.add(new MyEvent("Land of Beer and Honey", // Event Name
 									"Das Paradis auf Erden tritt ein und das Wasser im Fluss wird zu Bier", // Event description
-									0,10,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
+									0,+10,0,0,0,0,0)); 		// Dynamite, Beer, Money, Might, Zeal, Progress, AP Kosten
 
 		//Add good Events
 		goodEvents.add(new MyEvent("Stärkerbier", // Event Name
