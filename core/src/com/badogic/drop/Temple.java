@@ -10,4 +10,9 @@ public class Temple {
 		this.maxProgress = maxProgress;
 		this.progress = progress;
 	}
+	
+	public void update(int zeal, int progress) {
+		this.zeal += zeal;
+		this.progress += progress;
+	}
 }

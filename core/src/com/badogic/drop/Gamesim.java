@@ -23,11 +23,8 @@ public class Gamesim {
 		dialog = tempEvent.dialog;
 		
 		player.update(tempEvent.dynamite, tempEvent.beer, tempEvent.money);
-
-		temple.zeal += tempEvent.zeal;
-		temple.progress += tempEvent.progress;
+		temple.update(tempEvent.zeal, tempEvent.progress);
 		
-				
 		//Debug Code
 		System.out.println("Update");
 		System.out.println("Runde: " + turn);
@@ -37,10 +34,5 @@ public class Gamesim {
 	
 	public void getRandomEvent() {
 		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
-	}
-
-	public void updateAction() {}
-	
-	//public void performAction(Action action){}
-	
-	}
+	}	
+}
