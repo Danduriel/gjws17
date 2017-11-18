@@ -21,9 +21,9 @@ public class Gamesim {
 		
 		//Addiert Event Werte
 		dialog = tempEvent.dialog;
-		player.dynamite += tempEvent.dynamite;
-		player.beer += tempEvent.beer;
-		player.money += tempEvent.money;
+		
+		player.update(tempEvent.dynamite, tempEvent.beer, tempEvent.money);
+
 		temple.zeal += tempEvent.zeal;
 		temple.progress += tempEvent.progress;
 		

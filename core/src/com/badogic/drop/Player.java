@@ -11,8 +11,8 @@ public class Player {
 	public double might; 
 	
 	public Player(String name, String gender, String race) {
-		this.beer = 0;
 		this.dynamite = 0;
+		this.beer = 0;
 		this.money = 100;
 		this.name = name;
 		this.gender = gender;
@@ -20,6 +20,11 @@ public class Player {
 		this.might = 1.0;			
 	}
 			
+	public void update(int dynamite, int beer, int money) {
+		this.dynamite += dynamite;
+		this.beer += beer;
+		this.money += money;
+	}
 
 
 
