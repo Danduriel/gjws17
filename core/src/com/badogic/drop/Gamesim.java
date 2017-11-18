@@ -9,6 +9,7 @@ public class Gamesim {
 	public EventCreator eventCreator = new EventCreator();
 	public MyEvent tempEvent = new MyEvent("","",0,0,0,0,0,0,0);
 	public String dialog = "";
+	public MyAP tempAP = new MyAP("","",0,0,0,0,0,0,0);
 	
 	
 	public Gamesim(int turn) {	
@@ -22,6 +23,14 @@ public class Gamesim {
 		//Addiert Event Werte
 		dialog = tempEvent.description;
 		
+		//Dummy code 
+		tempAP = nextAction();
+		
+		//AP Player / Temple update
+		player.update(tempAP.dynamite, tempAP.beer, tempAP.money, tempAP.might, tempAP.ap);
+		temple.update(tempAP.zeal, tempAP.progress);
+		
+		//Event Player / Temple update
 		player.update(tempEvent.dynamite, tempEvent.beer, tempEvent.money,tempEvent.might, tempEvent.ap);
 		temple.update(tempEvent.zeal, tempEvent.progress);
 		
@@ -35,4 +44,9 @@ public class Gamesim {
 	public void getRandomEvent() {
 		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
 	}	
+	
+	public MyAP nextAction() {
+		//Dummy code ---- Aufruf über Button, hier einmal im update permanent eingebunden
+		return APCreator.clickBeerButton();
+	}
 }

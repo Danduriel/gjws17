@@ -6,7 +6,7 @@ public class APCreator {
 	}
 	
 	//Dummy ButtonFunktion
-	public MyAP clickBeerButton(){
+	public static MyAP clickBeerButton(){
 		MyAP tempAP = new MyAP("Party schmeiﬂen","Versuche die eifrigen Affen zu verkatern",0,5,20,0,10,-50,-50);
 		
 		return tempAP;
