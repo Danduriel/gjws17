@@ -7,7 +7,7 @@ public class Gamesim {
 	public Temple temple = new Temple(400,5000,0);
 	public int turn;
 	public EventCreator eventCreator = new EventCreator();
-	public myEvent tempEvent = new myEvent("","",0,0,0,0,0,0,0);
+	public MyEvent tempEvent = new MyEvent("","",0,0,0,0,0,0,0);
 	public String dialog = "";
 	
 	

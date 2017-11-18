@@ -1,12 +1,12 @@
 package com.badogic.drop;
 
-public class myEvent {
+public class MyEvent {
 	// Variablen der Klasse
 	public String name,description = "";
 	public int dynamite,beer,zeal,money,progress,might,ap = 0;
 	
 	//Konstruktor Events
-	public myEvent(String startName, String startDescripton, 
+	public MyEvent(String startName, String startDescripton, 
 					int startDynamite, int startBeer, int startMoney, int startMight, int startAP, 
 					int startZeal, int startProgress)
 	{
