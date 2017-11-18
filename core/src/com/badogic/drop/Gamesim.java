@@ -45,7 +45,8 @@ public class Gamesim {
 		tempEvent = EventCreator.getEventValue(ThreadLocalRandom.current().nextInt(0,3));
 	}	
 	
-	public void getNextAction() {
+	public void getNextAction(String action) {
+		//ToDo Switch action
 		tempAP = APCreator.clickBeerButton();
 	}
 }
