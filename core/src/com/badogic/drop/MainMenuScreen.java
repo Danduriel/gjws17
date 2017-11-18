@@ -8,9 +8,11 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 public class MainMenuScreen implements Screen {
 
@@ -21,14 +23,38 @@ public class MainMenuScreen implements Screen {
     
 	public MainMenuScreen(final Drop game) {
 		this.game = game;  
+		
 		stage = new Stage();
 	    Gdx.input.setInputProcessor(stage);// Make the stage consume events
 
 	    createBasicSkin();
 	    
-	    TextButton newGameButton = new TextButton("New game", skin); // Use the initialized skin
+	    TextButton newGameButton = new TextButton("Neues Spiel", skin); // Use the initialized skin
 	    newGameButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
 	    stage.addActor(newGameButton);
+	    newGameButton.addListener(new ChangeListener() {
+	    	public void changed (ChangeEvent event, Actor newGameButton) {
+	    		System.out.println("newgame!");
+	    	}
+	    });
+	    
+	    TextButton creditsButton = new TextButton("Credits", skin); // Use the initialized skin
+	    creditsButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
+	    stage.addActor(creditsButton);
+	    creditsButton.addListener(new ChangeListener() {
+	    	public void changed (ChangeEvent event, Actor creditsButton) {
+	    		System.out.println("credits!");
+	    	}
+	    });
+	    
+	    TextButton exitButton = new TextButton("Beenden", skin); // Use the initialized skin
+	    exitButton.setPosition(Gdx.graphics.getWidth()/2 - Gdx.graphics.getWidth()/8 , Gdx.graphics.getHeight()/2);
+	    stage.addActor(exitButton);
+	    newGameButton.addListener(new ChangeListener() {
+	    	public void changed (ChangeEvent event, Actor newGameButton) {
+	    		System.out.println("exit!");
+	    	}
+	    });
              
 	}
 	
