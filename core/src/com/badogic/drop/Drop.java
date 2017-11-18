@@ -33,8 +33,7 @@ public class Drop extends Game {
 	//Update
 	public void render() {
 		/* if Button pressed do update*/
-		//Neuer Code
-		if (mainMenuScreen.click = true) {
+		if (mainMenuScreen.click == true) {
 			gamesim.update();
 			mainMenuScreen.click = false;
 		}
